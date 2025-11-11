@@ -1,3 +1,0 @@
-# Home
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae eros leo. Aliquam erat volutpat. Vestibulum ullamcorper orci augue, sed rutrum erat malesuada at. Quisque id ante id lorem malesuada lacinia et condimentum sapien. Quisque arcu augue, rhoncus et nulla sed, tincidunt volutpat mauris. Suspendisse vel eleifend odio. Phasellus et neque gravida, tincidunt odio vel, euismod lacus. Aliquam id faucibus dolor. Sed sollicitudin nisi ac lorem porta viverra. Aliquam accumsan feugiat metus non congue. Sed dolor est, rhoncus sit amet sem vitae, lacinia luctus magna. Donec diam ipsum, accumsan ac orci non, hendrerit suscipit metus.
