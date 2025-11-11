@@ -1,7 +1,0 @@
-baseURL: https://mykyta.co.uk/
-languageCode: en-gb
-title: Mykyta Myronenko
-theme: ananke
-caches:
-    images:
-        dir: :cacheDir/images
