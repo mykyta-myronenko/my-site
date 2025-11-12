@@ -61,3 +61,12 @@ ignoreErrors = ["error-disable-taxonomy"]
     lineNos = true
     lineNumbersInTable = false
     codeFences = true
+
+[module]
+  [[module.imports]]
+    disable = false
+    ignoreConfig = false
+    ignoreImports = false
+    path = 'https://github.com/milafrerichs/hugo-wikilinks'
+  [[module.imports]]
+    path = 'my-shortcodes'
