@@ -1,0 +1,19 @@
+{{/* Find all pages that link to the current page */}}
+{{ $currentPage := . }}
+{{ $backlinks := slice }}
+{{ $wikiregex := `\[\[([^|\]]+)(\|([^|\]]+))?\]\]` }}
+
+{{ range where .Site.RegularPages "RelPermalink" "ne" .RelPermalink }}
+  {{ $page := . }}
+  {{ $wikilinks := findRESubmatch $wikiregex .RawContent }}
+  {{ range $wikilinks }}
+    {{ $wikiref := index . 1 }}
+    {{ with $currentPage.Site.GetPage $wikiref }}
+      {{ if eq .RelPermalink $currentPage.RelPermalink }}
+        {{ $backlinks = $backlinks | append $page }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ return $backlinks }}

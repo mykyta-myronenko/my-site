@@ -6,6 +6,8 @@ tags:
   - film_making
 ---
 
+[[Treat film like painting]]
+
 It has been a while that something has excited me as much as the idea of independent film making. With all the free tools we have at our disposal, and the online platforms for video distribution, combined with risk-averse stagnating traditional cinema, I can’t shake the feeling that we are in a golden age of independent film making.[^1]
 
 I think part of my own (misplaced) self-confidence comes from the fact that I have always had many interests. I’ve always wanted to dip my toes in all aspects of art, and I growing with platforms like YouTube I saw how people who are brave, hard-working, and with something to share find their own place to connect with other creators and audiences. A part of me thinks “I could do that”, but another part says “you will fail”, and I think both are right.

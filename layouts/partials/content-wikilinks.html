@@ -1,0 +1,22 @@
+{{/* Replace wikilinks [[...]] with Hugo links */}}
+{{ $wikiregex := `\[\[([^|\]]+)(\|([^|\]]+))?\]\]` }}
+{{ $content := .Content }}
+{{ $wikilinks := findRESubmatch $wikiregex .RawContent }}
+
+{{ range $wikilinks }}
+  {{ $fullMatch := index . 0 }}
+  {{ $wikiref := index . 1 }}
+  {{ $wikititle := index . 3 }}
+  
+  {{ with $.Page.Site.GetPage $wikiref }}
+    {{ if $wikititle }}
+      {{ $content = replace $content $fullMatch (printf "<a href=\"%s\">%s</a>" .RelPermalink $wikititle) }}
+    {{ else }}
+      {{ $content = replace $content $fullMatch (printf "<a href=\"%s\">%s</a>" .RelPermalink $wikiref) }}
+    {{ end }}
+  {{ else }}
+    {{ $content = replace $content $fullMatch (printf "<span class=\"broken-link\">%s</span>" $wikiref) }}
+  {{ end }}
+{{ end }}
+
+{{ $content | safeHTML }}
