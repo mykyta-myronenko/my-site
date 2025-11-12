@@ -1,5 +1,5 @@
 ---
-title: Did online content kill TV sketch come
+title: Did online content kill TV sketch comedy
 permalink: internet-killed-tv-sketches
 date: 2024-10-04
 tags:
