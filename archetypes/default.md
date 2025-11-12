@@ -4,4 +4,4 @@ draft: true
 title: {{ replace .File.ContentBaseName "-" " " | title }}
 ---
 
-{{ partial "content-wikilinks" . }}
+"{{ partial "content-wikilinks" . }}""
