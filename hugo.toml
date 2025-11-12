@@ -64,7 +64,4 @@ ignoreErrors = ["error-disable-taxonomy"]
 
 [module]
   [[module.imports]]
-    disable = false
-    ignoreConfig = false
-    ignoreImports = false
-    path = 'github.com/milafrerichs/hugo-wikilinks'
+    path = "github.com/milafrerichs/hugo-wikilinks"
