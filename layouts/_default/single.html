@@ -1,0 +1,37 @@
+{{ define "main" }}
+{{ if eq .Type "blog" }}{{ if not .Params.menu }}
+<h1>{{ .Title }}</h1>
+<p>
+  <i>
+    <time datetime='{{ .Date.Format "2006-01-02" }}'>
+      {{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }}
+    </time>
+  </i>
+</p>
+{{ end }}{{ end }}
+<content>
+  {{ partial "content-wikilinks" . }}
+</content>
+{{ if eq .Type "blog" }}{{ if (.Param "enablePostNavigator")}}
+{{- partial "post_navigator.html" . -}}
+{{ end }}{{ end }}
+
+
+<div style="margin-top: 16em; margin-bottom: 6em;">
+<hr>
+{{/* Backlinks section */}}
+    {{ with partial "funcs/backlinks.html" . }}
+    <h2>References to this post:</h2>
+    <ul>
+      {{ range . }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
+{{ end }}
+</div>
+{{/* Tags section */}}
+  {{ range (.GetTerms "tags") }}
+  <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
+  {{ end }}
+
+{{ end }}
